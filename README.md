@@ -1,24 +1,31 @@
-# SCMX Simulation
+This project simulates a lightweight *Supply Chain Management System* focused on lean inventory and delivery pipeline modeling.
 
-This project simulates a simple Supply Chain Management (SCMX) model with three main actors: Supplier, Manufacturer, and Retailer. The simulation demonstrates inventory flow, order processing, and basic supply chain strategies like Lean, Agile, and JIT.
+## 📦 Modules
 
-## Features
+### 1. Inventory Simulation (SCMX)
+- Models Supplier, Manufacturer, and Retailer nodes
+- Supports Lean, Agile, and JIT strategies
+- Randomized demand and lead times
+- CLI-based simulation output
 
-- Simulates daily operations of each supply chain node.
-- Models stock levels, production, and ordering processes.
-- Supports different supply chain modes (Lean, Agile, JIT) with randomized demands and lead times.
-- Console-based output for easy tracking of simulation steps.
+### 2. Delivery ETL Microservice (New!)
+- Uses real-world-style Amazon Logistics data (LMD)
+- Performs ETL (Extract, Transform, Load) pipeline from CSV
+- Outputs cleaned delivery logs and summarized vehicle performance
+- Helps evaluate delivery efficiency (e.g., scooter vs motorcycle)
+- Fully modular — can be plugged in or removed without breaking SCM logic
 
-## Getting Started
+## 📈 Sample Outputs
+
+- /data/etl_output.csv: Cleaned delivery records
+- /data/summary_by_vehicle.csv: Grouped delivery statistics (avg time, count)
+
+## ✅ Getting Started
 
 ### Prerequisites
+- Java 17 or above (Java 21+ tested)
+- Eclipse or IntelliJ (recommended)
 
-- Java 8 or higher
-- A Java IDE (Eclipse, IntelliJ IDEA) or command-line tools
-
-### How to Run
-
-1. Clone the repository:
-
+### Run Inventory Simulation
 ```bash
-git clone https://github.com/yourusername/scmx-simulation.git
+Run MainRunner.java
